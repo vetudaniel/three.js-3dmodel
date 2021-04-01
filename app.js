@@ -13,16 +13,16 @@ function init(){
     const fov = 35;
     const aspect = container.clientWidth / container.clientHeight;
     const near = 0.1;
-    const far = 500;
+    const far = 800;
 
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 500);
+    camera.position.set(0, 0, 580);
 
     const ambient = new THREE.AmbientLight(0x404040,2);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff, 2);
-    light.position.set(10, 10, 550);
+    const light = new THREE.DirectionalLight(0xffffff, 2.5);
+    light.position.set(50, 25, 100);
     scene.add(light)
 
     renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
