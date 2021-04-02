@@ -16,7 +16,7 @@ function init(){
     const far = 800;
 
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0,50);
+    camera.position.set(-1, 0.6,20);
 
     const ambient = new THREE.AmbientLight(0x404040,2);
     scene.add(ambient);
@@ -56,27 +56,3 @@ function onWindowResize(){
 window.addEventListener('resize', onWindowResize)
 
 
-function stars(){
-    let count = 230;
-    let scene = document.querySelector('body')
-    let i = 0;
-        while( i < count){
-            let star = document.createElement('i');
-            let x = Math.floor(Math.random()* window.innerWidth)
-            let y = Math.floor(Math.random()* window.innerHeight)
-            let duration = Math.random()* 10
-            let size = Math.random()* 2
-
-            star.style.left = x + 'px'
-            star.style.top = y + 'px'
-            star.style.width = 1 + size +  'px'
-            star.style.height = 1 + size +  'px'
-
-            star.style.animationDuration = 2 + duration +  's'
-            star.style.animationDelay = 1 + duration +  's'
-
-            scene.appendChild(star)
-            i++
-        }
-}
-stars()
