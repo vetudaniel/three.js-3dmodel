@@ -28,7 +28,8 @@ ul {
   z-index: 1;
   cursor: pointer;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  height: 40px;
   z-index: 101;
   background-color: #090a0f;
 }
