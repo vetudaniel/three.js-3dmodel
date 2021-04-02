@@ -7,9 +7,66 @@
 
 body {
   font-family: sans-serif;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #223077 100%);
   margin: 0;
   color: #fff;
+}
+li {
+  list-style-type: none;
+  padding: 1.5rem 0;
+  font-size: 1.2em;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  text-align: center;
+}
+.hamburger {
+  display: absolute;
+  position: fixed;
+  z-index: 1;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 101;
+  background-color: #090a0f;
+}
+.nav-container {
+  height: 100%;
+  background-color: #090a0f;
+  width: 70%;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-container.active {
+  transform: translateX(0);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 38px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+}
+.bar1.toggle {
+  transform: rotate(45deg) translate(3px, 6px);
+  width: 40px;
+}
+.bar2.toggle {
+  display: none;
+}
+.bar3.toggle {
+  transform: rotate(-45deg) translate(1px, -6px);
+  width: 40px;
 }
 
 .scene,

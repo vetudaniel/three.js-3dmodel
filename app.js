@@ -56,3 +56,6 @@ function onWindowResize(){
 window.addEventListener('resize', onWindowResize)
 
 
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
